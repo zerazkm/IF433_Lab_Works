@@ -1,8 +1,8 @@
 package oop_133907_SebastianReinhart.week01
-
 fun main() {
     val gameTitle = "Cyberpunk 2077"
     val price = 600000
+    val userNote: String? = null
 
     val discount = calculateDiscount(price)
     val finalPrice = price - (price * discount / 100)
@@ -11,6 +11,8 @@ fun main() {
         title = gameTitle,
         finalPrice = finalPrice
     )
+
+    println("Catatan: ${userNote ?: "Tidak ada catatan"}")
 }
 
 fun calculateDiscount(price: Int) =
