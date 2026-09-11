@@ -1,53 +1,34 @@
 package oop_133907_SebastianReinhart.week02
 
+package oop_<nim>_<nama>.week02
+
 import java.util.Scanner
 
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    println("--- APLIKASI PMB UMN ---")
+    println("=== LIBRARY FINE SYSTEM ===")
 
-    print("Masukkan Nama: ")
-    val name = scanner.nextLine()
+    print("Masukkan Judul Buku: ")
+    val bookTitle = scanner.nextLine()
 
-    print("Masukkan NIM (Wajib 5 Karakter): ")
-    val nim = scanner.next()
+    print("Masukkan Nama Peminjam: ")
+    val borrower = scanner.nextLine()
 
-    if (nim.length != 5) {
-        println("ERROR: Pendaftaran dibatalkan. NIM harus 5 karakter!")
-        println("Program berhenti di sini untuk mahasiswa ini, tidak membuat objek.")
-        return
+    print("Masukkan Lama Pinjam (hari): ")
+    var loanDuration = scanner.nextInt()
+
+    if (loanDuration < 0) {
+        loanDuration = 1
+        println("Durasi tidak boleh minus. Diubah menjadi 1 hari.")
     }
+
+    val loan = Loan(bookTitle, borrower, loanDuration)
 
     println()
-    println("Pilih Jalur Pendaftaran:")
-    println("1. Reguler")
-    println("2. Umum")
-    print("Pilihan: ")
-
-    val choice = scanner.nextInt()
-    scanner.nextLine()
-
-    if (choice == 1) {
-
-        print("Masukkan Jurusan: ")
-        val major = scanner.nextLine()
-
-        val student = Student(name, nim, major)
-
-        println("Status: Pendaftaran Selesai.")
-        println("Jurusan: ${student.major}")
-        println("GPA awal: ${student.gpa}")
-
-    } else if (choice == 2) {
-
-        val student = Student(name, nim)
-
-        println("Status: Pendaftaran Selesai.")
-        println("Jurusan: ${student.major}")
-        println("GPA awal: ${student.gpa}")
-
-    } else {
-        println("Pilihan tidak valid!")
-    }
+    println("=== DETAIL PEMINJAMAN ===")
+    println("Judul Buku  : ${loan.bookTitle}")
+    println("Peminjam    : ${loan.borrower}")
+    println("Lama Pinjam : ${loan.loanDuration} hari")
+    println("Total Denda : Rp${loan.calculateFine()}")
 }
