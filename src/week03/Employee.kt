@@ -22,4 +22,7 @@ class Employee(val name: String) {
     fun printStatus() {
         println("Karyawan: $name, Rating: $performanceRating")
     }
+
+    val annualSalary: Int
+        get() = salary * 12
 }
