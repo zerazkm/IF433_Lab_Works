@@ -1,14 +1,18 @@
 package oop_133907_SebastianReinhart.week03
 
 fun main() {
-    val e = Employee("Budi")
+    val weapon = Weapon("Excalibur", 500)
 
-    e.salary = 5000000
+    println("Weapon: ${weapon.name}")
+    println("Damage awal: ${weapon.damage}")
+    println("Tier: ${weapon.tier}")
 
-    println("Nama: ${e.name}")
-    println("Gaji Bulanan: ${e.salary}")
-    println("Gaji Tahunan: ${e.annualSalary}")
+    println("\nSet damage ke -50:")
+    weapon.damage = -50
+    println("Damage sekarang: ${weapon.damage}")
 
-    e.increasePerformance()
-    e.printStatus()
+    println("\nSet damage ke 9999:")
+    weapon.damage = 9999
+    println("Damage sekarang: ${weapon.damage}")
+    println("Tier: ${weapon.tier}")
 }
