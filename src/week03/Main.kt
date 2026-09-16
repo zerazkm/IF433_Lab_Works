@@ -1,18 +1,14 @@
 package oop_133907_SebastianReinhart.week03
 
 fun main() {
-    val weapon = Weapon("Excalibur", 500)
+    val player = Player("Budi")
 
-    println("Weapon: ${weapon.name}")
-    println("Damage awal: ${weapon.damage}")
-    println("Tier: ${weapon.tier}")
+    println("Username: ${player.username}")
+    println("Level awal: ${player.level}")
 
-    println("\nSet damage ke -50:")
-    weapon.damage = -50
-    println("Damage sekarang: ${weapon.damage}")
+    player.addXp(50)
+    println("Level setelah +50 XP: ${player.level}")
 
-    println("\nSet damage ke 9999:")
-    weapon.damage = 9999
-    println("Damage sekarang: ${weapon.damage}")
-    println("Tier: ${weapon.tier}")
+    player.addXp(60)
+    println("Level setelah +60 XP: ${player.level}")
 }
