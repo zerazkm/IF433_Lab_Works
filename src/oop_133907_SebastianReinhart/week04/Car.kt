@@ -6,8 +6,8 @@ class Car(
 ) : Vehicle(brand) {
 
     override fun accelerate() {
-        speed += 20
-        println("$brand berakselerasi. Kecepatan: $speed km/jam")
+        super.accelerate()
+        println("Mobil $brand menggunakan transmisi gigi untuk menambah kecepatan.")
     }
 
     override fun honk() {
