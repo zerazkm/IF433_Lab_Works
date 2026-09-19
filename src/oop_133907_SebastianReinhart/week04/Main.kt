@@ -1,6 +1,15 @@
 package oop_133907_SebastianReinhart.week04
 
 fun main() {
+
+    val manager = Manager("Budi", 10000000)
+    manager.work()
+    println("Manager bonus: Rp${manager.calculateBonus()}")
+
+    val developer = Developer("Andi", 8000000, "Kotlin")
+    developer.work()
+    println("Developer bonus: Rp${developer.calculateBonus()}")
+
     val vehicle = Vehicle("Generic Vehicle")
     vehicle.accelerate()
     vehicle.honk()
