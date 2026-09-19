@@ -12,4 +12,9 @@ fun main() {
     car.honk()
 
     println("Jumlah pintu: ${car.numberOfDoors}")
+
+    val electricCar = ElectricCar("Tesla", 4, 90)
+    electricCar.accelerate()
+    electricCar.honk()
 }
+
