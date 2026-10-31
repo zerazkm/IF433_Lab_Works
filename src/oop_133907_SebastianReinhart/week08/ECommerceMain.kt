@@ -19,5 +19,6 @@ fun main() {
         } catch (e: IllegalArgumentException) {
             println("[WARNING] Corrupt data: ${e.message}")
         }
+
     }
 }
