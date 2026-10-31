@@ -1,13 +1,13 @@
 package oop_133907_SebastianReinhart.week06
 
-fun processCheckout(payment: PaymentMethod, amount: Double) {
-    payment.pay(amount)
-}
-
 fun main() {
-    val gopay = Gopay()
-    val creditCard = CreditCard()
+    val lamp = SmartLamp("L01", "Ruang Tamu")
+    val speaker = SmartSpeaker("S01", "Google Nest Dapur")
+    val cctv = SmartCCTV("C01", "Ezviz Garasi")
 
-    processCheckout(gopay, 150000.0)
-    processCheckout(creditCard, 250000.0)
+    val hub = SmartHomeHub()
+
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
 }
