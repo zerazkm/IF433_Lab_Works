@@ -67,4 +67,5 @@ fun main() {
     }
 
     println("\nUnique Trading Pairs: $uniquePairs")
+
 }
